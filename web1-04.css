@@ -60,11 +60,9 @@ div.article::before {
     transition: 0.5s;
     width: 0%; height: 100%;
     z-index: -1;
-    opacity: 0.4;
 }
 div.article:hover::before {
     width: 100%;
-    opacity: 1;
 }
 div.article:hover {
     opacity: 1;
