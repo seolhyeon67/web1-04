@@ -48,21 +48,25 @@ div.article {
     box-sizing: border-box;
     padding: 70px 40px;
     width: 250px; height: 100%;
-    transition: opacity 0.5;
+    transition: 0.5;
+    z-index: 0;
     opacity: 0.4;
 }
 div.article::before {
     content: "";
-    width: 0px; height: 100%;
+    background: url(img/back.png);
+    position: absolute;
+    top: 0px; left: 0px;
     transition: 0.5s;
+    width: 0%; height: 100%;
+    z-index: -1;
+    opacity: 0.4;
 }
 div.article:hover::before {
-    content: "";
-    position: absolute;
-    width:100%; height: 100%;
-    top: 0; left: 0;
-    background: url(img/back.png);
-    z-index: -1;
+    width: 100%;
+    opacity: 1;
+}
+div.article:hover {
     opacity: 1;
 }
 div.article a {
